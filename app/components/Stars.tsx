@@ -22,7 +22,7 @@ export default function Stars({ reviews, rating }: { reviews: Review[]; rating?:
 			} else stars.push(emptyStar);
 		}
 
-		return stars.map(star => <Image src={star} alt="" key={star.src} className="w-4 h4 mr-1" />);
+		return stars.map((star, index) => <Image src={star} alt="" key={star.src + index} className="w-4 h4 mr-1" />);
 	};
 
 	return <div className="flex items-center">{renderStars()}</div>;
